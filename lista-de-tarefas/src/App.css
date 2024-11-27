@@ -1,0 +1,16 @@
+body{
+  background-color: rgb(230, 220, 220);
+}
+
+.app p{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20px;
+  border: 1px solid black;
+  border-radius: 1px;
+  width: 50%;
+  height: 47vw;
+}
+
+
