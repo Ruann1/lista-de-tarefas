@@ -1,0 +1,12 @@
+.default_container{
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    border-radius: 5px;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    height: 90vh;
+    background-color: whitesmoke;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.438);
+}

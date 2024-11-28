@@ -1,16 +1,18 @@
-body{
-  background-color: rgb(230, 220, 220);
+:root{
+  --color1: #412859;
+  --color2: #5C51A6;
+  --color3: #CC44F2;
+  --color4: #F26363;
+  --color5: #F2C36B;
 }
 
-.app p{
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  margin-top: 20px;
-  border: 1px solid black;
-  border-radius: 1px;
-  width: 50%;
-  height: 47vw;
+
+body{
+  background-color: var(--color2);
+  margin: 0;
+  padding: 0;
 }
+
+
 
 
