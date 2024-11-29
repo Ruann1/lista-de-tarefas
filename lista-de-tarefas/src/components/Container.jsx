@@ -1,11 +1,11 @@
-import styles from './Container'
+import styles from './Container.module.css'
 
-function Container(){
+function Container() {
     return(
-        <div className='default_container'>
-
-        </div>
+    <div className={styles.container}>
+        <p>teste</p>
+    </div>
     )
-} 
+}
 
-export default Container
+export default Container;
