@@ -1,0 +1,12 @@
+.elemento{
+    display: flex;
+    justify-content: center;
+}
+
+.elemento p{
+    color: var(--color5);
+    font-family: Bebas Neue, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-shadow: 1px 1px 1px black;
+    padding: 0em 11em 0em 8em;
+}

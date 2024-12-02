@@ -1,20 +1,17 @@
 import styles from './Folha.module.css'
-import Form from './Form'
+
+import Form from './Form/Form'
 import Dados from './Dados'
+import Tarefas from './Tarefas'
 
 function Folha() {
     return(
         <div className={styles.folha}>
-            <h1>Lista de Tarefas</h1>
-            <div className={styles.elemento}>
-                <p>N° De Tarefas: 000</p>
-                <p>Pendentes: 000</p>
-            </div>
             
+            <Dados />
             <Form />
+            <Tarefas />
             
-            
-        
         </div>
        
     )

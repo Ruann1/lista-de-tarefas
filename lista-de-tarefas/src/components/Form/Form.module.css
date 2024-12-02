@@ -33,3 +33,8 @@
     font-weight: 500;
     font-size: 14px;
 }
+
+.form_btn:hover{
+    background-color: var(--color5);
+    color: var(--color1);
+}
