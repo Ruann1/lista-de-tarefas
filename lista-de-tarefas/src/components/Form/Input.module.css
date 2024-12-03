@@ -1,0 +1,27 @@
+.input{
+    display: flex;
+    justify-content: center;
+}
+
+.input_box{
+    width: 30em;
+    height: 2em;
+}
+
+.input_sub{
+    height: 2.4em;
+    width: 6em;
+    margin-left: 1em;
+    border: 0px;
+    border-radius: 4%;
+    background-color: var(--color3);
+    color: var(--color5);
+    font-family: Bebas Neue, Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.input_sub:hover{
+    background-color: var(--color5);
+    color: var(--color1);
+}

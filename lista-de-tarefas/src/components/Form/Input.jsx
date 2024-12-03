@@ -1,10 +1,32 @@
-import styles from './Form.module.css'
+import styles from './Input.module.css'
+import { useState } from 'react'
 
-function Input(type, placeHolder){
+function Input(){
+
+    function Adicionar(e){
+        e.preventDefault()
+        
+    }
+
+    const [tarefa, setTarefa] = useState('')
+
     return(
-        <div>
-                <input type={type} 
-                placeholder={placeHolder} />
+        <div className={styles.input}>
+
+
+                <form onSubmit={Adicionar}>
+                    <input type='text'
+                    id='itexto'
+                    placeholder='Digite sua tarefa aqui'
+                    value={tarefa}
+                    className={styles.input_box}
+                    onChange={(e) => setTarefa(e.target.value)}
+                    />
+                    <input type='submit' value='Adicionar' className={styles.input_sub}></input>
+
+                </form>
+
+
         </div>
     )
 }
@@ -12,4 +34,3 @@ function Input(type, placeHolder){
 export default Input
 
 
-/* <input type="submit" value="adicionar" onClick={Adicionar()}className={styles.form_btn}/> */

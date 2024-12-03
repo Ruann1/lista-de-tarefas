@@ -6,10 +6,7 @@ function Form(){
     return(
         <div>
             <h1>Adicionar Tarefa</h1>
-            <Input 
-            type='text'
-            placeHolder='Teste'
-            />
+            <Input />
         </div>
         
     )

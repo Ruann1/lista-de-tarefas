@@ -21,20 +21,3 @@
     height: 2em;
 }
 
-.form_btn{
-    height: 2.4em;
-    width: 6em;
-    margin-left: 1em;
-    border: 0px;
-    border-radius: 4%;
-    background-color: var(--color3);
-    color: var(--color5);
-    font-family: Bebas Neue, Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-}
-
-.form_btn:hover{
-    background-color: var(--color5);
-    color: var(--color1);
-}

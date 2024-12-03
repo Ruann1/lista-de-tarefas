@@ -2,7 +2,7 @@ import styles from './Folha.module.css'
 
 import Form from './Form/Form'
 import Dados from './Dados'
-import Tarefas from './Tarefas'
+import Lista from './Lista'
 
 function Folha() {
     return(
@@ -10,7 +10,7 @@ function Folha() {
             
             <Dados />
             <Form />
-            <Tarefas />
+            <Lista />
             
         </div>
        
