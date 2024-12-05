@@ -1,17 +1,26 @@
+import {useState} from 'react'
 import styles from './Folha.module.css'
 
-import Form from './Form/Form'
-import Dados from './Dados'
-import Lista from './Lista'
+import Task from './Task'
 
-function Folha() {
-    return(
+
+function Folha(){
+    const[tarefas, setTarefas] = useState([]);
+
+    const addTask = (newTask) => {
+        setTarefas((prevTasks) => [...prevTasks, newTask]);
+        console.log(tarefas)
+    }
+
+   return(
         <div className={styles.folha}>
-            
-            <Dados />
-            <Form />
-            <Lista />
-            
+            <h1>Lista de Tarefas</h1>
+            <Task addTask={addTask} />
+            <ul>
+                {tarefas.map((tarefas, index) => (
+                    <li key={index}> {tarefas} </li>
+                ))}
+            </ul>
         </div>
        
     )
