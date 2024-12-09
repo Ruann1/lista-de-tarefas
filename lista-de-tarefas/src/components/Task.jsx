@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import styles from './Folha.module.css'
 
 function Task({ addTask }){
     const[tarefa, setTarefa] = useState('');
@@ -9,16 +10,28 @@ function Task({ addTask }){
         setTarefa('');
     };
 
+    const [conta, setConta] = useState(0);
+    function incremento()  {
+        setConta(conta + 1);
+    }
+
     return(
-        <form onSubmit={handleAdicionar}>
-            <input type="text" 
-            id="itext"
-            placeholder='Adicione sua nova Tarefa'
-            value={tarefa} 
-            onChange={(e) => setTarefa(e.target.value)}
-            />
-            <button type='submit'>Adicionar</button>
-        </form>
+        
+        <div className={styles.dados}>
+            <p>Voce adicionou {conta} tarefas</p>
+            <p>Voce tem 0 tarefas pendentes</p>
+            
+            <form onSubmit={handleAdicionar}>
+                <h1>Adicionar Tarefas</h1>
+                <input type="text"
+                id="itext"
+                placeholder='Adicione sua nova Tarefa'
+                value={tarefa}
+                onChange={(e) => setTarefa(e.target.value)}
+                />
+                <button type='submit' onClick={incremento}>Adicionar</button>
+            </form>
+        </div>
     );
 };
 

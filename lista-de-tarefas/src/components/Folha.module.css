@@ -8,6 +8,8 @@
     --color5: #F2C36B;
   }
 
+
+
 .folha{
     background-color: var(--color2);
     width: 65vw;
@@ -29,4 +31,51 @@
     text-wrap: wrap;
 }
 
+.folha select{
+    width: 90%;
+    margin-left: 5%;
+    background-color: #4e448d;
+}
+
+.folha option{
+    height: 3em;
+    width: 70%;
+    margin: 1em;
+    padding-left: 3em;
+    background-color: #2f1d41;
+    color: #F2C36B;
+    border-radius: 2.5%;
+    display: block;
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px black;
+}
+
+
+.dados p{
+    display: flex;
+    justify-content: left;
+    margin: 1.5em;
+    color: var(--color5);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: Bold;
+    text-shadow: 1px 1px 5px black;
+}
+
+.dados input{
+    width: 35%;
+    padding: 1%;
+    display: inline-block;
+    margin-left: 25%;
+}
+
+.dados button {
+    padding: 1%;
+    background-color: #F2C36B;
+    color: #2f1d41;
+    font-family: Bebas Neue;
+    font-size: 14px;
+}
 

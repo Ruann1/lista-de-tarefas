@@ -15,12 +15,19 @@ function Folha(){
    return(
         <div className={styles.folha}>
             <h1>Lista de Tarefas</h1>
+
             <Task addTask={addTask} />
-            <ul>
+            <h1>Tarefas Adicionadas</h1>
+            <select size={3}>
                 {tarefas.map((tarefas, index) => (
-                    <li key={index}> {tarefas} </li>
+                    <optgroup>
+                        <option key={index}> {tarefas} </option>
+                    </optgroup>
                 ))}
-            </ul>
+                
+                
+            </select>
+            
         </div>
        
     )
