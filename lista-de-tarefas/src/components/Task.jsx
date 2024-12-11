@@ -11,7 +11,7 @@ function Task({ addTask }){
     };
 
     const [conta, setConta] = useState(0);
-    function incremento()  {
+    function Incremento()  {
         setConta(conta + 1);
     }
 
@@ -19,7 +19,7 @@ function Task({ addTask }){
         
         <div className={styles.dados}>
             <p>Voce adicionou {conta} tarefas</p>
-            <p>Voce tem 0 tarefas pendentes</p>
+            <p>Voce tem {conta} tarefas pendentes</p>
             
             <form onSubmit={handleAdicionar}>
                 <h1>Adicionar Tarefas</h1>
@@ -29,7 +29,8 @@ function Task({ addTask }){
                 value={tarefa}
                 onChange={(e) => setTarefa(e.target.value)}
                 />
-                <button type='submit' onClick={incremento}>Adicionar</button>
+                <button type='submit' onClick={Incremento}>Adicionar</button>
+                
             </form>
         </div>
     );
