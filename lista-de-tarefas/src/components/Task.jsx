@@ -1,39 +1,45 @@
-import {useState} from 'react'
-import styles from './Folha.module.css'
+import { useState } from 'react';
+import styles from './Folha.module.css';
 
-function Task({ addTask }){
-    const[tarefa, setTarefa] = useState('');
+function Task({ tarefas, addTask, deleteTask }) {
+    const [novaTarefa, setNovaTarefa] = useState('');
 
     const handleAdicionar = (e) => {
         e.preventDefault();
-        addTask(tarefa);
-        setTarefa('');
+        if (novaTarefa.trim()) {
+            addTask(novaTarefa);
+            setNovaTarefa('');
+        }
     };
 
-    const [conta, setConta] = useState(0);
-    function Incremento()  {
-        setConta(conta + 1);
-    }
-
-    return(
-        
+    return (
         <div className={styles.dados}>
-            <p>Voce adicionou {conta} tarefas</p>
-            <p>Voce tem {conta} tarefas pendentes</p>
-            
             <form onSubmit={handleAdicionar}>
-                <h1>Adicionar Tarefas</h1>
-                <input type="text"
-                id="itext"
-                placeholder='Adicione sua nova Tarefa'
-                value={tarefa}
-                onChange={(e) => setTarefa(e.target.value)}
+                <h1>Adicionar Tarefa</h1>
+                <input
+                    type="text"
+                    id="itext"
+                    placeholder="Adicione sua nova Tarefa"
+                    value={novaTarefa}
+                    onChange={(e) => setNovaTarefa(e.target.value)}
                 />
-                <button type='submit' onClick={Incremento}>Adicionar</button>
-                
+                <button type="submit">Adicionar</button>
             </form>
+
+            <h1>Tarefas Adicionadas</h1>
+            {tarefas.map((tarefa) => (
+                <div key={tarefa.id} className={styles.tarefas}>
+                    <span className={styles.folha}>{tarefa.name}</span>
+                    <button
+                        className={styles.btn}
+                        onClick={() => deleteTask(tarefa.id)}
+                    >
+                        Deletar
+                    </button>
+                </div>
+            ))}
         </div>
     );
-};
+}
 
 export default Task;
